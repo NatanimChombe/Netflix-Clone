@@ -1,7 +1,8 @@
-const API_KEY=process.env.REACT_APP_API_KEY;
-const Requests ={
+const API_KEY = import.meta.env.VITE_API_KEY;
+// console.log("API KEY:", import.meta.env.VITE_API_KEY);
+const requests ={
         fetchTrending:`/trending/all/week?api_key=${API_KEY}&language=en-US   `,
-        fetchNetflixOriginals:`/discover/tv ?api_key=${API_KEY}&with_networks 213`,
+        fetchNetflixOriginals:`/discover/tv?api_key=${API_KEY}&with_networks 213`,
         fetchTopRatedMovies:`/movie/top_rated?api_key=${API_KEY}&language=en-US   `,
         fetchActionMovies:`/discover/movie?api_key=${API_KEY}& with_genres=28  `,
         fetchComedyMovies:`/discover/movie?api_key=${API_KEY}& with_genres=35   `,
@@ -10,4 +11,8 @@ const Requests ={
         fetchDocumentaries:`/discover/movie?api_key=${API_KEY}& with_genres=99   `,
         fetchTvShow:`/tv/popular?api_key=${API_KEY}&language=en-US&page=1  `
 };
-export default Requests;
+export default requests;
+// // Change this:
+// const API_URL = process.env.VITE_API_URL; 
+// // To this:
+// const API_URL = import.meta.env.VITE_API_URL;
