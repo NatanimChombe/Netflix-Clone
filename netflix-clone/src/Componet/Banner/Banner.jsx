@@ -23,7 +23,9 @@ function turncate(str,n){
     return str?.length>n ? str.substr(0,n-1) +'...' : str ;
 }
 
-
+// npm install
+// npm run build
+// npm run deploy
 return (
     <div className="banner" style={{
         backgroundSize:"cover",
